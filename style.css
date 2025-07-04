@@ -5,6 +5,8 @@
   top: 0;
   right: 20px;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #nav li {
