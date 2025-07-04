@@ -12,7 +12,7 @@
     {
       coords: [33.670327, 130.449761], 
       image: 'images/IMG_0005.jpg',
-      link: 'img001.html',
+      link: 'graffiti01.html',
       
     },
     {
@@ -30,7 +30,8 @@
     },
     {
       coords: [33.663445, 130.444235],
-      image: 'images/img006.png'
+      image: 'images/img006.png',
+      link: 'graffiti01.html',
     },
     {
       coords: [33.663460, 130.444477], 
