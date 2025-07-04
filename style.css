@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/*menu*/
+#nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+#nav li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+#nav li a {
+  font-weight: bold;
+}
+
+
+/*mvslide*/
+.mv {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  animation: img-change 15s infinite;
+  opacity: 0;
+}
+
+.item:nth-child(1) {
+  animation-delay: 0s;
+}
+.item:nth-child(2) {
+  animation-delay: 5s;
+}
+.item:nth-child(3 ) {
+  animation-delay: 10s;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes img-change{
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/**/
+body {
+    margin: 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto; 
+    
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ #photo {
+    height: 300px;
+ }
+
+ul li {
+    list-style: none;
+ }
+
+.about h1 {
+  text-align: center;
+  font: bold;
+  margin-top: 50px;
+}
+
+.about h2 {
+  width: 1000px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: medium;
+}
+
+
+
+/*map*/
+ .map-img {
+  height: auto;
+  width: auto;
+  margin-left: 70%;
+ }
+
+ #map {
+    height: 90vh;
+    width: 1300px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-left: 1%;*/
+    border: #5399fc 2px solid;
+    box-shadow: 0px 0px 5px 0px;
+ }
+
+ .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: #000;
+    color: #FFF;
+ }
+
+.popup-img {
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/*gallery*/
+img {
+  width: 100%;
+}
+
+.content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-list {
+  max-width: 350px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-list img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで画像を少し拡大（任意） */
+/*.card-list:hover img {
+  transform: scale(1.05);
+}
+
+/* オーバーレイ追加 */
+/*.card-list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* 初期は透明 */
+ /* transition: background-color 0.3s ease;
+}
+
+/* ホバー時に色を重ねる（例：黒の半透明） */
+/*.card-list:hover::after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*graffiti gallery*/
+
+/* フェードインアニメーション */
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(80px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* ナビゲーションを縦並びに変更 */
+  #nav {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 20px;
+  }
+
+  #nav li {
+    margin: 10px 0;
+  }
+
+  /* スライド画像のサイズ調整 */
+  .mv {
+    height: 300px;
+  }
+
+  .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* マップサイズ調整 */
+  #map {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .popup-img {
+    width: 100%;
+  }
+
+  /* セクション余白調整 */
+  section {
+    margin: 50px 10px;
+    padding: 0 10px;
+  }
+
+  /* ギャラリー画像 */
+  .card-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-list {
+    width: 90%;
+    max-width: 100%;
+  }
+}
